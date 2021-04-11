@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+    --azul_claro: rgb(118, 194, 204);
+    --fondo_calculadora: rgb(28, 31, 41);
+    --fondo_teclado: rgb(35, 41, 56);
+    --fondo_boton_accion: rgb(48, 55, 70);
+    --fondo_boton_borrar: rgb(205, 44, 52);
+    --color_fuente: rgb(143, 153, 184);
+    --fuente_boton_igual: rgb(37, 38, 58);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.calculadora{
+    display: grid;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background: var(--fondo_calculadora);
+    width:fit-content;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.pantalla{
+    display: grid;
+    grid-auto-flow: row;
+    text-align: end;
+    justify-content: right;
+    align-items: right;
+    color: var(--azul_claro);
+    padding: 20px;
+    gap: 1px;
+}
+
+.teclado{
+    display: grid;
+    justify-content: center;
+    border-radius: 10px;
+    grid-template-columns: repeat(5, 35px);
+    grid-template-rows: repeat(4, 35px);
+    background:var(--fondo_teclado);
+    padding: 25px;
+    color: var(--color_fuente);
+    gap: 4px;
+}
+
+.boton {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 70px;
+}
+
+.accion{
+    background: var(--fondo_boton_accion);
+}
+
+.borrar{
+    background: var(--fondo_boton_borrar);
+}
+
+.material-icons {
+    transform: scale(0.75);
+    opacity: 0.8;
+}
+
+.igual{
+    grid-row: span 2;
+    background: var(--azul_claro);
+    color:var(--fuente_boton_igual);
+}
