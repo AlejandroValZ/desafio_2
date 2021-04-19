@@ -9,9 +9,9 @@ class Pantalla {
         this.valorActivo = '';
         this.signos = {
             sumar: '+',
-            dividir: '÷',
-            multiplicar: 'x',
             restar: '-',
+            multiplicar: 'x',
+            dividir: '÷',
         }
     }
 
