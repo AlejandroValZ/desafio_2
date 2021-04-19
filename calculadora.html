@@ -6,37 +6,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="styles.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="Calculadora.js" type="text/javascript"></script>
+        <script src="Pantalla.js" type="text/javascript"></script>
+        <script src="script.js" type="text/javascript" defer></script>
         <title>Calculadora</title>
     </head>
     <body>
         <div class="calculadora">
             <div class="pantalla">
-                <div class="num_guardado">15</div>
-                <div class="operacion">+</div>
-                <div class="num_activo">6</div>
+                <div id="num_guardado"></div>
+                <div id="operacion"></div>
+                <div id="num_activo"></div>
             </div>
             <div class="teclado">
-                <div class="boton">7</div>
-                <div class="boton">8</div>
-                <div class="boton">9</div>
-                <div class="boton accion">÷</div>
-                <div class="boton accion">+/-</div>
-                <div class="boton">4</div>
-                <div class="boton">5</div>
-                <div class="boton">6</div>
-                <div class="boton accion">x</div>
-                <div class="boton borrar">
+                <button class="numero">7</button>
+                <button class="numero">8</button>
+                <button class="numero">9</button>
+                <button class="operador accion" value="dividir">÷</button>
+                <button id="invertir_signo" class="accion">+/-</button>
+                <button class="numero">4</button>
+                <button class="numero">5</button>
+                <button class="numero">6</button>
+                <button class="operador accion" value="multiplicar">x</button>
+                <button class="borrar" onclick="pantalla.borrar()">
                     <span class="material-icons">backspace</span>
-                </div>
-                <div class="boton">1</div>
-                <div class="boton">2</div>
-                <div class="boton">3</div>
-                <div class="boton accion">-</div>
-                <div class="boton igual">=</div>
-                <div class="boton">C</div>
-                <div class="boton">0</div>
-                <div class="boton">.</div>
-                <div class="boton accion">+</div>
+                </button>
+                <button class="numero">1</button>
+                <button class="numero">2</button>
+                <button class="numero">3</button>
+                <button class="operador accion" value="restar">-</button>
+                <button class="operador igual" value="igual">=</button>
+                <button onclick="pantalla.borrarTodo()">C</button>
+                <button class="numero">0</button>
+                <button class="numero">.</button>
+                <button class="operador accion" value="sumar">+</button>
             </div>
         </div>
     </body>

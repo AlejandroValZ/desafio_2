@@ -19,29 +19,31 @@ body {
     font-weight: bold;
 }
 
-.calculadora{
+.calculadora {
     display: grid;
     position: relative;
     height: 300px;
-    width: 300px;
     background: var(--fondo_calculadora);
     width:fit-content;
     border-radius: 20px;
     overflow: hidden;
 }
 
-.pantalla{
+.pantalla {
     display: grid;
     grid-auto-flow: row;
     text-align: end;
     justify-content: right;
-    align-items: right;
     color: var(--azul_claro);
     padding: 20px;
     gap: 1px;
 }
 
-.teclado{
+#num_guardado, #operacion, #num_activo {
+    height: 20px;
+}
+
+.teclado {
     display: grid;
     justify-content: center;
     border-radius: 10px;
@@ -53,19 +55,31 @@ body {
     gap: 4px;
 }
 
-.boton {
+button {
     display: grid;
     justify-content: center;
     align-items: center;
     border-radius: 70px;
+    outline: none;
+    border: none;
+    color: var(--color_fuente);
+    background: var(--fondo_teclado);
 }
 
-.accion{
+button:active {
+    background: rgb(50, 59, 82);
+}
+
+.accion {
     background: var(--fondo_boton_accion);
 }
 
-.borrar{
+.borrar {
     background: var(--fondo_boton_borrar);
+}
+
+.borrar:active {
+    background: rgb(221, 54, 62);
 }
 
 .material-icons {
@@ -73,8 +87,12 @@ body {
     opacity: 0.8;
 }
 
-.igual{
+.igual {
     grid-row: span 2;
     background: var(--azul_claro);
     color:var(--fuente_boton_igual);
+}
+
+.igual:active {
+    background: rgb(136, 217, 228);
 }
